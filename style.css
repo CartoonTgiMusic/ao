@@ -48,12 +48,7 @@ body {
     border-radius:190px;
     }
     
-    .title {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    }
+    
     
   
     .track-name {
