@@ -1,6 +1,5 @@
 body {
-    margin: 0px;
-    padding: 0px;
+    
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     }
@@ -61,11 +60,11 @@ body {
     }
     
     .buttons {
-      font-size: 10px;
+    font-size: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
     }
     .active{
         color: rgb(0, 0, 0);
@@ -76,7 +75,7 @@ body {
     .playpause-track,
     .prev-track,
     .next-track {
-    padding: 25px;
+    padding: 20px;
     opacity: 0.8;
     transition: opacity .2s;
     }
@@ -163,28 +162,4 @@ body {
           transform: rotate(359deg);
         }
     }
-    .loader {
-      height: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .loader .stroke{
-        background: #f1f1f1;
-        height: 150%;
-        width: 10px;
-        border-radius: 50px;
-        margin: 0 5px;
-        animation: animate 1.4s linear infinite;
-    }
-      @keyframes animate {
-        50% {
-          height: 20%;
-          background: #4286f4;
-        }
     
-        100% {
-          background: #4286f4;
-          height: 100%;
-        };
-      }
