@@ -5,7 +5,7 @@ body {
     }
     
     .player{
-      height: 80vh;
+      height: 85vh;
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -15,7 +15,7 @@ body {
       border: 1px solid transparent;
       padding: 0px;
       border-radius: 20px;
-      background-color: #13dfdf;
+      background-color: #0af272d1;
       box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     }
     a{
