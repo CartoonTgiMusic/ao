@@ -10,7 +10,6 @@ body {
       align-items: center;
       flex-direction: column;
       justify-content: center;
-      background-color: #3774FF;
   }
     .wrapper{
       border: 1px solid transparent;
@@ -19,8 +18,10 @@ body {
       background-color: #e0ee1dd1;
       box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     }
-    .wrapper h2{
-      text-align: center;
+    .wrapper .title{
+      display: flex;
+      justify-content: center;
+      
     }
     .home{
       display: flex;
