@@ -1,86 +1,99 @@
-body {
-    
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    }
-    
-    .player{
-      height: 85vh;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-  }
-    .wrapper{
-      border: 1px solid transparent;
-      padding: 0px;
-      border-radius: 20px;
-      background-color: #e0ee1dd1;
-      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    }
-    .wrapper .title{
-      display: flex;
-      justify-content: center;
-      
-    }
-    .home{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-    a{
-      text-decoration: none;
-      color: black;
-      margin:0px 15px;
-    }
-    
-    .details {
+
+body {
+  font-family: 'Poppins', 'Montserrat', sans-serif;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+  color: #000;
+}
+
+.container {
+  width: 100rem;
+  height: 90vh;
+  padding: 20px;
+}
+
+.heading {
+  color: #ffffff;
+  text-align: center;
+  font-weight: 400;
+}
+.home{
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    }
-    
-    .track-art {
-    margin: 10px;
-    height: 150px;
-    width: 150px;
-    border:2px solid 	#FFFAFA;
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    -moz-box-shadow: 0px 4px 3px black;
-    -webkit-box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.697);
-    box-shadow: 0px 4px 3px black;
-    -moz-border-radius:190px;
-    -webkit-border-radius:190px;
-    border-radius:190px;
-    }
-    
-    
-    
-  
-    .track-name {
+    flex-direction: row;
+    justify-content: space-between;
+}
+.home a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.music-container {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 1);
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.track-art {
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(30, 255, 0, 0.9);
+  position: relative;
+  bottom: 30px;
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+
+#music-box {
+  width: 100%;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  }
+
+  .track-name {
     font-size: 1.5rem;
     }
     
     .track-artist {
-    margin-top: 5px;
     font-size: 1rem;
+    }
+
+    .track-writer{
+      font-size: .7rem;
     }
     
     .buttons {
     font-size: 10px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     }
     .active{
         color: rgb(0, 0, 0);
     }
-    
+
     .repeat-track,
     .random-track,
     .playpause-track,
@@ -96,22 +109,22 @@ body {
     .playpause-track:hover,
     .prev-track:hover,
     .next-track:hover {
-      transform: scale(1.2);
-    opacity: .8;
+    transform: scale(1.2);
     }
     
     .slider_container {
     display: flex;
     justify-content: center;
     align-items: center;
-    }
+  }
+    
     
     .seek_slider, .volume_slider {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     height: 5px;
-    background:#3774FF ;
+    background:rgb(0, 0, 0) ;
     -webkit-transition: .2s;
     transition: opacity .2s;
     }
@@ -124,9 +137,9 @@ body {
     width: 15px;
     height: 15px;
     background: rgb(255, 255, 255);
-    border: 3px solid #3774FF;
+    border: 3px solid rgb(4, 0, 0);
     cursor: grab;
-    border-radius: 100%;
+    border-radius: 50%;
     }
     
     .seek_slider:hover,
@@ -139,7 +152,7 @@ body {
     }
     
     .volume_slider {
-    width: 30%;
+    width: 40%;
     }
     
     .current-time,
@@ -163,15 +176,11 @@ body {
     .randomActive{
         color: rgb(247, 6, 6);
     }
-    .rotate {
-        animation: rotation 8s infinite linear;
-    }
-    @keyframes rotation {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(359deg);
-        }
-    }
-    
+
+
+
+
+
+
+
+
