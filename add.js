@@ -1,11 +1,12 @@
 let track_art = document.querySelector('.track-art');
 let track_name = document.querySelector('.track-name');
 let track_artist = document.querySelector('.track-artist');
-
+let track_writer = document.querySelector('.track-writer');
 
 let playpause_btn = document.querySelector('.playpause-track');
 let next_btn = document.querySelector('.next-track');
 let prev_btn = document.querySelector('.prev-track');
+let repeat_btn = document.querySelector('.repeat-track')
 
 let seek_slider = document.querySelector('.seek_slider');
 let volume_slider = document.querySelector('.volume_slider');
@@ -20,30 +21,98 @@ let isRandom = false;
 let updateTimer;
 
 const music_list = [
-    {
-        img : 'images/track1.jpg',
-        name : 'သရာပငေါဝ်းသချင်',
-        artist : 'ခွန်ပဒဲကော',
-        music : 'music/track1.mp3'
-    },
-    {
-        img : 'images/track2.jpg',
-        name : 'လွေပျောပျော',
-        artist : 'ခွန်ခွန်ကျော်ဦး',
-        music : 'music/track2.mp3'
-    },
-    {
-        img : 'images/track5.jpg',
-        name : 'ဗေသိမ်',
-        artist : 'ခွန်ပဒဲကော',
-        music : 'music/track3.mp3'
-    },
-    {
-        img : 'images/track8.jpg',
-        name : 'ကြိုက်ကြိုက်မကြိုက်ကြိုက်',
-        artist : 'ပဒဲ',
-        music : 'music/track4.mp3'
-    }
+  {
+    title: 'မဂ်လာႏဒျာႏဗွေႏဩ',
+    artist: 'ကာတွန်းစွိုꩻ',
+    writer: 'တဲမ်း-ခွန်ခွန်ကျော်ဦး',
+    coverPath: 'assets/images/logo.jpg',
+    discPath: 'assets/music/music1.mp3',
+  },
+  {
+    title: 'ဆုတောင်ꩻနော',
+    writer:'တဲမ်း-ခွန်ခွန်ကျော်ဦး',
+    artist: 'ခွန်ချို',
+    coverPath: 'assets/images/cover4.jpg',
+    discPath: 'assets/music/music2.mp3',
+  },
+  
+  {
+    title: 'တဖြာꩻတွမ်ႏတဖြာꩻ',
+    artist: 'ခွန်ခွန်ကျော်ဦး',
+    coverPath: 'assets/images/cover1.jpg',
+    discPath: 'assets/music/music3.mp3',
+    writer: 'တဲမ်း-ခွန်ခွန်ကျော်ဦး',
+  },
+  {
+    title: 'အောဝ်ႏကော့ꩻမွောင်ꩻ',
+    artist: 'ခွန်ပျူ',
+    coverPath: 'assets/images/cover3.jpg',
+    discPath: 'assets/music/music4.mp3',
+    writer: 'တဲမ်း-ခွန်ခွန်ကျော်ဦး',
+  },
+  {
+    title: 'သေနာႏလဲဥ်း',
+    artist: 'ခွန်ပဒဲကော',
+    coverPath: 'assets/images/cover5.jpg',
+    discPath: 'assets/music/music5.mp3',
+    writer: 'တဲမ်း-ခွန်ခွန်ကျော်ဦး',
+  },
+  {
+    title: 'အောဝ်ႏ',
+    artist: 'ခွန်ခွန်ကျော်ဦး',
+    coverPath: 'assets/images/cover1.jpg',
+    discPath: 'assets/music/music6.mp3',
+    writer: 'တဲမ်း-ခွန်ခွန်ကျော်ဦး',
+  },
+  {
+    title: 'လဲဥ်ꩻထိုႏမွန်းခွေꩻ',
+    artist: 'ခွန်ကော်လီ',
+    coverPath: 'assets/images/cover2.jpg',
+    discPath: 'assets/music/music7.mp3',
+    writer: 'တဲမ်း-ခွန်ခွန်ကျော်ဦး',
+  },
+  {
+    title: 'တဥ်ႏခွေါင်ဒျာႏနော်',
+    artist: 'ခွန်ဝဒုတ်',
+    coverPath: 'assets/images/cover7.jpg',
+    discPath: 'assets/music/music8.mp3',
+    writer: 'တဲမ်း-ခွန်ခွန်ကျော်ဦး',
+  },
+  {
+    title: 'အွဥ်ႏဖိင်ꩻခန်း ',
+    artist: 'ခွန်ချို',
+    coverPath: 'assets/images/cover4.jpg',
+    discPath: 'assets/music/music9.mp3',
+    writer: 'တဲမ်း-ခွန်ပဒဲကော',
+  },
+  {
+    title: 'မွိုက်လွေꩻဟိုင်း',
+    artist: 'ခွန်ကျော်စိုး',
+    coverPath: 'assets/images/cover8.jpg',
+    discPath: 'assets/music/music10.mp3',
+    writer: 'တဲမ်း-ခွန်ခွန်ကျော်ဦး',
+  },
+  {
+    title: 'ကမ်ူးဒျာႏနာꩻသꩻ',
+    artist: 'ခွန်ခွန်ကျော်ဦး',
+    coverPath: 'assets/images/cover1.jpg',
+    discPath: 'assets/music/music11.mp3',
+    writer: 'တဲမ်း-ခွန်ခွန်ကျော်ဦး',
+  },
+  {
+    title: 'မဲ့ꩻခွေꩻလွဥ်ꩻယန်း',
+    artist: 'ခွန်ပဒဲကော',
+    coverPath: 'assets/images/cover5.jpg',
+    discPath: 'assets/music/music12.mp3',
+    writer: 'တဲမ်း-ခွန်ပဒဲကော',
+  },
+  {
+    title: 'နာꩻထန်ႏထိုꩻ',
+    artist: 'ခွန်ဇော်ခက်',
+    coverPath: 'assets/images/cover6.jpg',
+    discPath: 'assets/music/music13.mp3',
+    writer: 'တဲမ်း-ခွန်ခွန်ကျော်ဦး',
+  },
 ];
 
 loadTrack(track_index);
@@ -52,12 +121,13 @@ function loadTrack(track_index){
     clearInterval(updateTimer);
     reset();
 
-    curr_track.src = music_list[track_index].music;
+    curr_track.src = music_list[track_index].discPath;
     curr_track.load();
 
-    track_art.style.backgroundImage = "url(" + music_list[track_index].img + ")";
-    track_name.textContent = music_list[track_index].name;
+    track_art.style.backgroundImage = "url(" + music_list[track_index].coverPath+ ")";
+    track_name.textContent = music_list[track_index].title;
     track_artist.textContent = music_list[track_index].artist;
+    track_writer.textContent = music_list[track_index].writer;
     
 
     updateTimer = setInterval(setUpdate, 1000);
@@ -94,13 +164,11 @@ function playpauseTrack(){
 function playTrack(){
     curr_track.play();
     isPlaying = true;
-    track_art.classList.add('rotate');
     playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
 }
 function pauseTrack(){
     curr_track.pause();
     isPlaying = false;
-    track_art.classList.remove('rotate');
     playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
 }
 function nextTrack(){
@@ -151,3 +219,8 @@ function setUpdate(){
         total_duration.textContent = durationMinutes + ":" + durationSeconds;
     }
 }
+
+
+
+
+
