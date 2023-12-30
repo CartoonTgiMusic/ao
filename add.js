@@ -95,7 +95,7 @@ const music_list = [
     writer: 'တဲမ်း-ခွန်ခွန်ကျော်ဦး',
   },
   {
-    title: 'ကမ်ူးဒျာႏနာꩻသꩻ',
+    title: 'ကမ်းဒျာႏနာꩻသꩻ',
     artist: 'ခွန်ခွန်ကျော်ဦး',
     coverPath: 'assets/images/cover1.jpg',
     discPath: 'assets/music/music11.mp3',
