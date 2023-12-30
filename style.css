@@ -31,6 +31,10 @@ body {
     flex-direction: row;
     justify-content: space-between;
 }
+.fa-house:hover,
+.fa-list:hover{
+  transform: scale(1.2);
+}
 .home a{
   text-decoration: none;
   color: #ffffff;
@@ -49,7 +53,7 @@ body {
 
 .track-art {
   border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(30, 255, 0, 0.9);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
   position: relative;
   bottom: 30px;
   width: 200px;
@@ -68,18 +72,22 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  font-weight: 500;
   }
 
   .track-name {
     font-size: 1.5rem;
+    text-shadow: 2px 0 2px rgba(0, 0, 0, 0.5)
     }
     
     .track-artist {
     font-size: 1rem;
+    text-shadow: 1px 0 1px rgba(0, 0, 0, 0.5)
     }
 
     .track-writer{
       font-size: .7rem;
+      text-shadow: .7px 0 .7px rgba(0, 0, 0, 0.5)
     }
     
     .buttons {
@@ -89,18 +97,15 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 5px;
+    text-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
     }
-    .active{
-        color: rgb(0, 0, 0);
-    }
-
     .repeat-track,
     .random-track,
     .playpause-track,
     .prev-track,
     .next-track {
     padding: 20px;
-    opacity: 0.8;
+    opacity: 1;
     transition: opacity .2s;
     }
     
@@ -116,6 +121,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-shadow: 1px 0 1px rgba(0, 0, 0, 0.5)
   }
     
     
