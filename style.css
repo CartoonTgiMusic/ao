@@ -105,10 +105,10 @@ body {
     .playpause-track,
     .prev-track,
     .next-track {
-    padding: 20px 7%;
+    padding:20px 30px;
     opacity: 1;
     transition: opacity .2s;
-    font-size: .8rem;
+    font-size: .7rem;
     }
     
     .repeat-track:hover,
