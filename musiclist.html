@@ -10,165 +10,158 @@
     <link rel=stylesheet href="style.css" media=all> 
   </head>
   <style>
-body{
-  background-color: #2d2d2d;
-  color: #ffc266;
-  font-family: 'Roboto', sans-serif;
-  margin: auto;
-}
-.container{
-  top: 0;
-  position: fixed;  
-  width: 100%;
-  margin: auto;
-  background-color: #2d2d2d;
-  justify-content: center;
-  
-}
-.header{
-  display: flex;
-  justify-content: space-between;
-  width: 95%;
-  margin: auto;
-  align-items: center;
-}
-.header h2{
-  color:#ffc266 ;
-}
-
-.fa-house:hover,
-.fa-close:hover{
-  transform: scale(1.2);
-}
-#myProgress {
-  width: 80%;
-   background-color: #d9d9f2; 
-  cursor: pointer;
-  border-radius: 10px;
-  margin: auto;
-}
-
-#myBar {
-  width: 0%;
-  height: 5px;
-  background-color: #ffc266;
-  border-radius: 10px;
-}
-
-.logo {
-  fill: red;
-}
-
-.btn-action{
-  cursor: pointer;
-  padding-top: 10px;
-  justify-content: space-between;
-  width: 95%;
-}
-
-.btn-ctn, .infos-ctn{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.infos-ctn{
-padding-top: 10px;
-
-}
-
-.btn-ctn > div {
- padding-left: 20px;
- padding-right: 20px;
- margin-top: 10px;
- margin-bottom: 10px;
-}
-.btn-ctn i:hover{
-  transform: scale(1.2);
-}
-
-.infos-ctn > div {
- margin-bottom: 10px;
- color: #ffc266;
-}
-
-.first-btn{
-  margin-left: 0px;
-}
-
-.duration{
-  margin-left: 10px;
-}
-
-.title{
-  margin-left: 10px;
-  width: 67%;
-  text-align: center;
-}
-
-.player-ctn{
-  border-radius: 15px;
-  width: 95%;
-  padding: 10px;
-  background-color: #373737;
-  margin:auto;
-  margin-top: 10px;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.playlist-track-ctn{
-  display: flex;
-  background-color: #464646;
-  margin-top: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.playlist-track-ctn:last-child{
- /*border: 1px solid #ffc266; */
-}
-
-.playlist-track-ctn > div{
-  margin:5px;
-}
-.playlist-track-ctn:hover{
-  transform: scale(1.1);
-}
-.playlist-info-track{
-  width: 50%;
-}
-.playlist-info-track,.playlist-duration{
-  padding-top: 7px;
-  padding-bottom: 7px;
-  color: #e9cc95;
-  font-size: .9rem;
-  pointer-events: none;
-}
-.playlist-ctn{
-   padding-bottom: 10px;
-   margin-top: 220px;
-
-}
-.active-track{
-  background: #4d4d4d;
-  color: #ffc266 !important;
-  font-weight: bold;
-  
-}
-
-.active-track > .playlist-info-track,.active-track >.playlist-duration,.active-track > .playlist-btn-play{
-  color: #ffc266 !important;
-}
-
-
-.playlist-btn-play{
-  pointer-events: none;
-  padding-top: 7px;
-  padding-bottom: 7px;
-}
-.fas{
-  color: #ffc266;
-  font-size: 1.5rem;
-}
+    body{
+      background-color: #2d2d2d;
+      color: #ffc266;
+      font-family: 'Roboto', sans-serif;
+      margin: auto;
+    }
+    .container{
+      top: 0;
+      position: fixed;  
+      width: 100%;
+      margin: auto;
+      background-color: #2d2d2d;
+      justify-content: center;
+      
+    }
+    .header{
+      display: flex;
+      justify-content: space-between;
+      width: 95%;
+      margin: auto;
+      align-items: center;
+    }
+    
+    .fa-house:hover,
+    .fa-close:hover{
+      transform: scale(1.2);
+    }
+    #myProgress {
+      width: 80%;
+       background-color: #d9d9f2; 
+      cursor: pointer;
+      border-radius: 10px;
+      margin: auto;
+    }
+    
+    #myBar {
+      width: 0%;
+      height: 5px;
+      background-color: #ffc266;
+      border-radius: 10px;
+    }
+    
+    .btn-action{
+      cursor: pointer;
+      padding-top: 10px;
+      justify-content: space-between;
+    }
+    
+    .btn-ctn, .infos-ctn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .infos-ctn{
+    padding-top: 10px;
+    
+    }
+    
+    .btn-ctn > div {
+     padding-left: 20px;
+     padding-right: 20px;
+     margin-top: 10px;
+     margin-bottom: 10px;
+    }
+    .btn-ctn i:hover{
+      transform: scale(1.2);
+    }
+    
+    .infos-ctn > div {
+     margin-bottom: 10px;
+     color: #ffc266;
+    }
+    
+    .first-btn{
+      margin-left: 0px;
+    }
+    
+    .duration{
+      margin-left: 10px;
+    }
+    
+    .title{
+      margin-left: 10px;
+      width: 67%;
+      text-align: center;
+    }
+    
+    .player-ctn{
+      border-radius: 15px;
+      width: 95%;
+      padding: 10px;
+      background-color: #373737;
+      margin:auto;
+      margin-top: 10px;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    
+    .playlist-track-ctn{
+      display: flex;
+      background-color: #464646;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .playlist-track-ctn:last-child{
+     /*border: 1px solid #ffc266; */
+    }
+    
+    .playlist-track-ctn > div{
+      margin:5px;
+    }
+    .playlist-track-ctn:hover{
+      transform: scale(1.05);
+    }
+    .playlist-info-track{
+      width: 50%;
+    }
+    .playlist-info-track,.playlist-duration{
+      padding-top: 7px;
+      padding-bottom: 7px;
+      color: #e9cc95;
+      font-size: .9rem;
+      pointer-events: none;
+    }
+    .playlist-ctn{
+       padding-bottom: 10px;
+       margin-top: 220px;
+    
+    }
+    .active-track{
+      background: #4d4d4d;
+      color: #ffc266 !important;
+      font-weight: bold;
+      
+    }
+    
+    .active-track > .playlist-info-track,.active-track >.playlist-duration,.active-track > .playlist-btn-play{
+      color: #ffc266 !important;
+    }
+    
+    
+    .playlist-btn-play{
+      pointer-events: none;
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
+    .fas{
+      color: #ffc266;
+      font-size: 1.5rem;
+    }
+      </style>
   </style>
   <body>
     <audio id="myAudio" ontimeupdate="onTimeUpdate()">
@@ -180,7 +173,7 @@ padding-top: 10px;
   <div class="container">
       <div class="header">
         <div><a href="https://cartoontgimusic.github.io/homepage"><i class="fas fa-house" style="color:#ffc266 ;" ></i></a></div>
-        <h2>အောဝ်း</h2>
+        <h2 style="color: #ffc266 ;" >အောဝ်း</h2>
         <div ><a href="index.html"><i class="fas fa-close" style="color:#ffc266 ;" ></i></a></div>
       </div>
 
@@ -213,7 +206,7 @@ padding-top: 10px;
         <i class='fas fa-pause' id="icon-pause" style="display: none"></i>
       </div>
    </div>
-   <div class="btn-play" onclick="forward()">
+   <div class="btn-action" onclick="forward()">
       <div id="btn-faws-forward">
         <i class='fas fa-forward'></i>
       </div>
