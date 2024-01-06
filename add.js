@@ -158,13 +158,13 @@ function pauseRandom(){
 }
 function playLoop(){
   isLoop = true;
-  loopIcon.classList.add('loopActive');
+  loopIcon.innerHTML = '1'
 }
 function pauseLoop(){
   isLoop = false;
-  loopIcon.classList.remove('loopActive');
+  loopIcon.innerHTML = ''
 }
-function repeatTrack(){
+function loopTrack(){
       pauseRandom();
     if(curr_track.loop != true){
       curr_track.loop = true;
